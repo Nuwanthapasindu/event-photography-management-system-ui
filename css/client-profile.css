@@ -1,0 +1,387 @@
+/* Client Profile Page Styles */
+
+.client-profile-page {
+    background-color: var(--secondary-light-gray);
+    min-height: calc(100vh - 200px);
+}
+
+.profile-section,
+.password-section {
+    background: var(--secondary-white);
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+}
+
+.section-header {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    color: var(--text-primary);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Form Styling */
+.form-group {
+    position: relative;
+}
+
+.form-label {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--secondary-white);
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.15);
+    color: var(--text-primary);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Password Input Wrapper */
+.password-input-wrapper {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+    color: var(--text-secondary);
+}
+
+.password-toggle i {
+    font-size: 0.9rem;
+}
+
+/* Button Styling */
+.save-changes-btn,
+.change-password-btn {
+    background-color: var(--primary-deep-blue);
+    border: none;
+    border-radius: 8px;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.save-changes-btn:hover,
+.change-password-btn:hover {
+    background-color: var(--primary-blue);
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(10, 37, 64, 0.3);
+    border-color: var(--primary-blue);
+}
+
+.save-changes-btn:active,
+.change-password-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 15px rgba(10, 37, 64, 0.2);
+}
+
+/* Ripple effect on click */
+.save-changes-btn::before,
+.change-password-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.save-changes-btn:active::before,
+.change-password-btn:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Success state */
+.btn-success {
+    background-color: var(--interactive-success-green) !important;
+}
+
+.btn-success:hover {
+    background-color: #218838 !important;
+}
+
+/* Focus effects */
+.form-group.focused .form-label {
+    color: var(--primary-blue);
+}
+
+.form-group.focused .form-control {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.15);
+}
+
+/* Loading animation */
+.save-changes-btn.loading,
+.change-password-btn.loading {
+    color: transparent;
+}
+
+.save-changes-btn.loading::after,
+.change-password-btn.loading::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Form animations */
+.profile-form,
+.password-form {
+    animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .profile-section,
+    .password-section {
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .client-profile-page {
+        padding: 2rem 0;
+    }
+    
+    .profile-section,
+    .password-section {
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .form-control {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .save-changes-btn,
+    .change-password-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    /* Stack password fields vertically on mobile */
+    .password-form .row .col-md-4 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .profile-section,
+    .password-section {
+        padding: 1.25rem;
+    }
+    
+    .section-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .form-control {
+        font-size: 0.85rem;
+    }
+}
+
+/* Full width form enhancements */
+.profile-form .row,
+.password-form .row {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+
+.profile-form .row > *,
+.password-form .row > * {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/* Enhanced form group spacing for full width */
+.profile-form .form-group,
+.password-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Button container styling */
+.profile-form .row:last-child,
+.password-form .row:last-child {
+    margin-top: 1rem;
+}
+
+/* Error states */
+.form-control.is-invalid {
+    border-color: var(--interactive-error-red);
+    background-color: #fff5f5;
+}
+
+.form-control.is-invalid:focus {
+    border-color: var(--interactive-error-red);
+    box-shadow: 0 0 0 0.2rem rgba(230, 57, 70, 0.15);
+}
+
+.form-control.is-valid {
+    border-color: var(--interactive-success-green);
+    background-color: #f0fff4;
+}
+
+.form-control.is-valid:focus {
+    border-color: var(--interactive-success-green);
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.15);
+}
+
+/* Validation feedback */
+.invalid-feedback {
+    color: var(--interactive-error-red);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.valid-feedback {
+    color: var(--interactive-success-green);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Enhanced button hover animations */
+.save-changes-btn,
+.change-password-btn {
+    background: var(--primary-deep-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.save-changes-btn:hover,
+.change-password-btn:hover {
+    background: var(--primary-deep-blue);
+    color: white;
+    transform: scale(1.02) translateY(-1px);
+    box-shadow: 0 10px 30px rgba(10, 37, 64, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.save-changes-btn:focus,
+.change-password-btn:focus {
+    outline: none;
+    background: var(--primary-deep-blue);
+    color: white;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+}
+
+/* Pulse animation on focus */
+.save-changes-btn:focus,
+.change-password-btn:focus {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(74, 144, 226, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
+    }
+}

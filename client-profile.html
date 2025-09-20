@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Profile - Capturely</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/client-profile.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-camera me-2"></i>
+                <span class="fw-bold">Capturely</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="my-bookings.html">My Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">My Albums</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Reviews</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user-circle me-1"></i> Profile
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item active" href="client-profile.html"><i class="fas fa-user me-2"></i>My Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="book-event.html">Book Event</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="client-profile-page py-5">
+        <div class="container">
+            <!-- Client Profile Section -->
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="profile-section">
+                        <div class="section-header text-center mb-4">
+                            <h2 class="section-title">Client Profile</h2>
+                            <p class="section-subtitle text-muted">Manage client information and preferences.</p>
+                        </div>
+                        
+                        <form class="profile-form" id="profileForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" placeholder="First Name" value="John">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" placeholder="Last Name" value="Doe">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="abc@abc.com" value="john.doe@example.com">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group mb-4">
+                                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phoneNumber" placeholder="0112-123-1313-31" value="+1 (555) 123-4567">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 save-changes-btn">Save Changes</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reset Password Section -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="password-section">
+                        <div class="section-header text-center mb-4">
+                            <h2 class="section-title">Reset Your Password</h2>
+                            <p class="section-subtitle text-muted">Manage Password</p>
+                        </div>
+                        
+                        <form class="password-form" id="passwordForm">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label for="currentPassword" class="form-label">Current Password</label>
+                                        <div class="password-input-wrapper">
+                                            <input type="password" class="form-control" id="currentPassword" placeholder="Current Password">
+                                            <button type="button" class="password-toggle" onclick="togglePassword('currentPassword')">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group mb-3">
+                                        <label for="newPassword" class="form-label">Password</label>
+                                        <div class="password-input-wrapper">
+                                            <input type="password" class="form-control" id="newPassword" placeholder="********">
+                                            <button type="button" class="password-toggle" onclick="togglePassword('newPassword')">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group mb-4">
+                                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                        <div class="password-input-wrapper">
+                                            <input type="password" class="form-control" id="confirmPassword" placeholder="********">
+                                            <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary w-100 change-password-btn">Change Password</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer py-4">
+        <div class="container text-center">
+            <ul class="list-inline mb-3">
+                <li class="list-inline-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                <li class="list-inline-item"><a href="#" class="text-decoration-none">Services</a></li>
+                <li class="list-inline-item"><a href="portfolio.html" class="text-decoration-none">Portfolio</a></li>
+                <li class="list-inline-item"><a href="about.html" class="text-decoration-none">About Us</a></li>
+                <li class="list-inline-item"><a href="contact.html" class="text-decoration-none">Contact</a></li>
+            </ul>
+            <div class="social-icons mb-3">
+                <a href="#" class="text-decoration-none mx-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-decoration-none mx-2"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-decoration-none mx-2"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="text-muted small mb-0">&copy; 2025 <span class="fw-bold">Capturely</span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Toggle password visibility
+        function togglePassword(fieldId) {
+            const passwordField = document.getElementById(fieldId);
+            const toggleButton = passwordField.nextElementSibling;
+            const icon = toggleButton.querySelector('i');
+            
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordField.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        // Profile form submission
+        document.getElementById('profileForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phoneNumber = document.getElementById('phoneNumber').value.trim();
+            
+            // Basic validation
+            if (!firstName || !lastName || !email) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Show success message
+            alert('Profile updated successfully!');
+            
+            // Add visual feedback
+            const button = this.querySelector('.save-changes-btn');
+            const originalText = button.textContent;
+            button.textContent = 'Saved!';
+            button.classList.add('btn-success');
+            button.classList.remove('btn-primary');
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.classList.remove('btn-success');
+                button.classList.add('btn-primary');
+            }, 2000);
+        });
+
+        // Password form submission
+        document.getElementById('passwordForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const currentPassword = document.getElementById('currentPassword').value;
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            // Basic validation
+            if (!currentPassword || !newPassword || !confirmPassword) {
+                alert('Please fill in all password fields.');
+                return;
+            }
+            
+            // Password length validation
+            if (newPassword.length < 8) {
+                alert('New password must be at least 8 characters long.');
+                return;
+            }
+            
+            // Confirm password validation
+            if (newPassword !== confirmPassword) {
+                alert('New password and confirm password do not match.');
+                return;
+            }
+            
+            // Show success message
+            alert('Password changed successfully!');
+            
+            // Clear form
+            this.reset();
+            
+            // Add visual feedback
+            const button = this.querySelector('.change-password-btn');
+            const originalText = button.textContent;
+            button.textContent = 'Changed!';
+            button.classList.add('btn-success');
+            button.classList.remove('btn-primary');
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.classList.remove('btn-success');
+                button.classList.add('btn-primary');
+            }, 2000);
+        });
+
+        // Add input focus effects
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.closest('.form-group').classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                this.closest('.form-group').classList.remove('focused');
+            });
+        });
+    </script>
+
+</body>
+</html>
