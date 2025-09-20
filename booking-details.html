@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Details - Capturely</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/booking-details.css">
+</head>
+<body>
+
+    <!-- Back Navigation -->
+    <div class="back-navigation">
+        <div class="container py-3">
+            <a href="my-bookings.html" class="back-arrow-link">
+                <i class="fas fa-arrow-left me-2"></i>
+                Back to My Bookings
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="booking-details-page">
+        <div class="container py-5">
+            <!-- Page Header -->
+            <div class="page-header mb-4">
+                <h1 class="page-title">Booking Details</h1>
+                <p class="page-subtitle">View and manage the details of this booking.</p>
+            </div>
+
+            <!-- Booking Details Card -->
+            <div class="booking-details-card">
+                <!-- Event Information Section -->
+                <section class="details-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-calendar-alt section-icon me-2"></i>
+                        Event Information
+                    </h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="detail-item">
+                                <label class="detail-label">Event Title</label>
+                                <p class="detail-value">Sarah's Wedding</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="detail-item">
+                                <label class="detail-label">Date & Time</label>
+                                <p class="detail-value">Saturday, July 20, 2024, 4:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="detail-item">
+                                <label class="detail-label">Location</label>
+                                <p class="detail-value">The Grand Ballroom, 123<br>Main Street, Anytown</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="detail-item">
+                                <label class="detail-label">Client</label>
+                                <p class="detail-value">Emily Carter</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Package Details Section -->
+                <section class="details-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-box section-icon me-2"></i>
+                        Package Details
+                    </h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="detail-item">
+                                <label class="detail-label">Package Name</label>
+                                <p class="detail-value">Premium Wedding Package</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="detail-item">
+                                <label class="detail-label">Services</label>
+                                <p class="detail-value">Photography, Videography, Drone Coverage</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="detail-item">
+                                <label class="detail-label">Price</label>
+                                <p class="detail-value price-value">$5,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Payment Information Section -->
+                <section class="details-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-credit-card section-icon me-2"></i>
+                        Payment Information
+                    </h2>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="detail-item">
+                                <label class="detail-label">Status</label>
+                                <span class="badge status-badge status-paid">
+                                    <i class="fas fa-check-circle me-1"></i>
+                                    Paid
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="detail-item">
+                                <label class="detail-label">Amount Paid</label>
+                                <p class="detail-value amount-value">$5,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Additional Notes Section -->
+                <section class="details-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-sticky-note section-icon me-2"></i>
+                        Additional Notes
+                    </h2>
+                    <div class="notes-content">
+                        <p class="notes-text">
+                            The client requested additional coverage for the reception and a photo booth. 
+                            Please confirm these details with the client before the event.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button type="button" class="btn btn-outline-danger cancel-btn">
+                        <i class="fas fa-times me-2"></i>
+                        Cancel Booking
+                    </button>
+                    <button type="button" class="btn btn-primary edit-btn">
+                        <i class="fas fa-edit me-2"></i>
+                        Edit Booking
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
