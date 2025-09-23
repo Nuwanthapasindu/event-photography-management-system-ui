@@ -6,7 +6,8 @@
 }
 
 .profile-section,
-.password-section {
+.password-section,
+.delete-section {
     background: var(--secondary-white);
     border-radius: 12px;
     padding: 2.5rem;
@@ -212,7 +213,8 @@
 /* Responsive Design */
 @media (max-width: 991.98px) {
     .profile-section,
-    .password-section {
+    .password-section,
+    .delete-section {
         padding: 2rem;
         margin-bottom: 2rem;
     }
@@ -228,7 +230,8 @@
     }
     
     .profile-section,
-    .password-section {
+    .password-section,
+    .delete-section {
         padding: 1.5rem;
         border-radius: 8px;
         margin-bottom: 1.5rem;
@@ -244,7 +247,8 @@
     }
     
     .save-changes-btn,
-    .change-password-btn {
+    .change-password-btn,
+    .delete-profile-btn {
         padding: 0.75rem 1.5rem;
         font-size: 0.95rem;
     }
@@ -257,7 +261,8 @@
 
 @media (max-width: 575.98px) {
     .profile-section,
-    .password-section {
+    .password-section,
+    .delete-section {
         padding: 1.25rem;
     }
     
@@ -384,4 +389,66 @@
     100% {
         box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
     }
+}
+
+/* Delete Profile Section */
+.delete-section {
+    border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+.delete-warning-box {
+    background-color: #fff8f8;
+    border: 1px solid rgba(220, 53, 69, 0.2);
+    border-radius: 8px;
+}
+
+.delete-profile-btn {
+    background-color: var(--interactive-error-red);
+    border: none;
+    border-radius: 8px;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.delete-profile-btn:hover {
+    background-color: #dc3545;
+    transform: scale(1.02) translateY(-1px);
+    box-shadow: 0 8px 25px rgba(220, 53, 69, 0.3);
+    color: white;
+}
+
+.delete-profile-btn:focus {
+    outline: none;
+    background-color: var(--interactive-error-red);
+    color: white;
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.3);
+}
+
+.delete-profile-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);
+}
+
+/* Modal styling for delete confirmation */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    padding: 1.5rem 1.5rem 0;
+}
+
+.modal-body {
+    padding: 1rem 1.5rem;
+}
+
+.modal-footer {
+    padding: 0 1.5rem 1.5rem;
 }

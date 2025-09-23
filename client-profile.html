@@ -157,6 +157,43 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Delete Profile Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="delete-section">
+                        <div class="section-header text-center mb-4">
+                            <h2 class="section-title text-danger">Delete Profile</h2>
+                            <p class="section-subtitle text-muted">Permanently delete your account and all associated data.</p>
+                        </div>
+                        
+                        <div class="delete-warning-box p-4 mb-4">
+                            <div class="d-flex align-items-start">
+                                <i class="fas fa-exclamation-triangle text-warning me-3 mt-1"></i>
+                                <div>
+                                    <h5 class="text-warning mb-2">Warning: This action cannot be undone</h5>
+                                    <p class="text-muted mb-0">Deleting your profile will permanently remove:</p>
+                                    <ul class="text-muted mt-2 mb-0">
+                                        <li>Your personal information and account settings</li>
+                                        <li>All booking history and event records</li>
+                                        <li>Photo albums and shared content</li>
+                                        <li>Reviews and testimonials</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <button type="button" class="btn btn-danger w-100 delete-profile-btn" onclick="confirmProfileDeletion()">
+                                    <i class="fas fa-trash-alt me-2"></i>
+                                    Delete My Profile
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -294,6 +331,85 @@
                 this.closest('.form-group').classList.remove('focused');
             });
         });
+
+        // Profile deletion confirmation
+        function confirmProfileDeletion() {
+            const modal = document.createElement('div');
+            modal.className = 'modal fade';
+            modal.innerHTML = `
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h5 class="modal-title text-danger">
+                                <i class="fas fa-exclamation-triangle me-2"></i>
+                                Confirm Profile Deletion
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="mb-3">Are you absolutely sure you want to delete your profile?</p>
+                            <div class="alert alert-danger" role="alert">
+                                <strong>This action is permanent and cannot be undone.</strong><br>
+                                All your data, bookings, and photos will be permanently deleted.
+                            </div>
+                            <div class="form-group">
+                                <label for="deleteConfirmation" class="form-label">
+                                    Type <strong>"DELETE"</strong> to confirm:
+                                </label>
+                                <input type="text" class="form-control" id="deleteConfirmation" placeholder="Type DELETE here">
+                            </div>
+                        </div>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-danger" id="confirmDeleteBtn" disabled onclick="executeProfileDeletion()">
+                                <i class="fas fa-trash-alt me-2"></i>
+                                Delete Profile
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            const modalInstance = new bootstrap.Modal(modal);
+            modalInstance.show();
+            
+            // Enable delete button only when "DELETE" is typed
+            const confirmInput = modal.querySelector('#deleteConfirmation');
+            const deleteBtn = modal.querySelector('#confirmDeleteBtn');
+            
+            confirmInput.addEventListener('input', function() {
+                if (this.value === 'DELETE') {
+                    deleteBtn.disabled = false;
+                    deleteBtn.classList.remove('btn-danger');
+                    deleteBtn.classList.add('btn-outline-danger');
+                } else {
+                    deleteBtn.disabled = true;
+                    deleteBtn.classList.remove('btn-outline-danger');
+                    deleteBtn.classList.add('btn-danger');
+                }
+            });
+            
+            // Clean up modal when hidden
+            modal.addEventListener('hidden.bs.modal', function() {
+                document.body.removeChild(modal);
+            });
+        }
+
+        function executeProfileDeletion() {
+            // Show loading state
+            const deleteBtn = document.querySelector('#confirmDeleteBtn');
+            deleteBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Deleting...';
+            deleteBtn.disabled = true;
+            
+            // Simulate deletion process
+            setTimeout(() => {
+                alert('Profile deletion initiated. You will be redirected to the homepage.');
+                // In a real application, this would make an API call to delete the profile
+                // and then redirect to the homepage or login page
+                window.location.href = 'index.html';
+            }, 2000);
+        }
     </script>
 
 </body>

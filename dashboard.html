@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Capturely</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-camera logo-icon"></i>
+                    <span class="logo-text">Capturely</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-tachometer-alt nav-icon"></i>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-calendar-check nav-icon"></i>
+                            <span class="nav-text">Bookings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-user-cog nav-icon"></i>
+                            <span class="nav-text">Admin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-camera nav-icon"></i>
+                            <span class="nav-text">Photographers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-box nav-icon"></i>
+                            <span class="nav-text">Packages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-credit-card nav-icon"></i>
+                            <span class="nav-text">Payments</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-star nav-icon"></i>
+                            <span class="nav-text">Reviews</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-images nav-icon"></i>
+                            <span class="nav-text">Albums</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-tools nav-icon"></i>
+                            <span class="nav-text">Equipment</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="sidebar-footer">
+                    <a href="#" class="nav-link logout-link">
+                        <i class="fas fa-sign-out-alt nav-icon"></i>
+                        <span class="nav-text">Log Out</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-bar-content">
+                    <div class="welcome-section">
+                        <h1 class="welcome-title">Welcome <span class="user-name">Nuwantha</span></h1>
+                    </div>
+                    
+                    <div class="top-bar-actions">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="user-profile">
+                            <img src="https://via.placeholder.com/40x40/0A2540/FFFFFF?text=N" alt="User Profile" class="profile-image">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <div class="content-wrapper">
+                    <!-- Bookings Table -->
+                    <div class="bookings-table-container">
+                        <div class="table-responsive">
+                            <table class="table bookings-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Event</th>
+                                        <th>Category</th>
+                                        <th>Status</th>
+                                        <th>Payment Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="booking-id">01</td>
+                                        <td class="event-desc">Covers essential event moments.</td>
+                                        <td class="category">
+                                            <span class="category-badge category-wedding">Wedding</span>
+                                        </td>
+                                        <td class="status">
+                                            <span class="status-badge status-complete">COMPLETE</span>
+                                        </td>
+                                        <td class="payment-status">
+                                            <span class="payment-badge payment-approved">APPROVED</span>
+                                        </td>
+                                        <td class="actions">
+                                            <button class="btn btn-sm btn-outline-primary view-btn">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="booking-id">02</td>
+                                        <td class="event-desc">Includes more comprehensive coverage.</td>
+                                        <td class="category">
+                                            <span class="category-badge category-birthday">Birthday Party</span>
+                                        </td>
+                                        <td class="status">
+                                            <span class="status-badge status-pending">PENDING</span>
+                                        </td>
+                                        <td class="payment-status">
+                                            <span class="payment-badge payment-pending">PENDING</span>
+                                        </td>
+                                        <td class="actions">
+                                            <button class="btn btn-sm btn-outline-primary view-btn">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="booking-id">03</td>
+                                        <td class="event-desc">Full event coverage with extra features.</td>
+                                        <td class="category">
+                                            <span class="category-badge category-wedding">Wedding</span>
+                                        </td>
+                                        <td class="status">
+                                            <span class="status-badge status-pending">PENDING</span>
+                                        </td>
+                                        <td class="payment-status">
+                                            <span class="payment-badge payment-pending">PENDING</span>
+                                        </td>
+                                        <td class="actions">
+                                            <button class="btn btn-sm btn-outline-primary view-btn">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="booking-id">04</td>
+                                        <td class="event-desc">Extensive coverage with premium add-ons.</td>
+                                        <td class="category">
+                                            <span class="category-badge category-birthday">Birthday Party</span>
+                                        </td>
+                                        <td class="status">
+                                            <span class="status-badge status-pending">PENDING</span>
+                                        </td>
+                                        <td class="payment-status">
+                                            <span class="payment-badge payment-pending">PENDING</span>
+                                        </td>
+                                        <td class="actions">
+                                            <button class="btn btn-sm btn-outline-primary view-btn">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="booking-id">05</td>
+                                        <td class="event-desc">Mid-range coverage with additional options.</td>
+                                        <td class="category">
+                                            <span class="category-badge category-birthday">Birthday Party</span>
+                                        </td>
+                                        <td class="status">
+                                            <span class="status-badge status-pending">PENDING</span>
+                                        </td>
+                                        <td class="payment-status">
+                                            <span class="payment-badge payment-pending">PENDING</span>
+                                        </td>
+                                        <td class="actions">
+                                            <button class="btn btn-sm btn-outline-primary view-btn">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="booking-id">06</td>
+                                        <td class="event-desc">High-end coverage with enhanced services.</td>
+                                        <td class="category">
+                                            <span class="category-badge category-wedding">Wedding</span>
+                                        </td>
+                                        <td class="status">
+                                            <span class="status-badge status-complete">COMPLETE</span>
+                                        </td>
+                                        <td class="payment-status">
+                                            <span class="payment-badge payment-approved">APPROVED</span>
+                                        </td>
+                                        <td class="actions">
+                                            <button class="btn btn-sm btn-outline-primary view-btn">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="booking-id">07</td>
+                                        <td class="event-desc">Entry-level coverage for smaller events.</td>
+                                        <td class="category">
+                                            <span class="category-badge category-wedding">Wedding</span>
+                                        </td>
+                                        <td class="status">
+                                            <span class="status-badge status-complete">COMPLETE</span>
+                                        </td>
+                                        <td class="payment-status">
+                                            <span class="payment-badge payment-approved">APPROVED</span>
+                                        </td>
+                                        <td class="actions">
+                                            <button class="btn btn-sm btn-outline-primary view-btn">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="booking-id">08</td>
+                                        <td class="event-desc">Top-tier coverage with exclusive benefits.</td>
+                                        <td class="category">
+                                            <span class="category-badge category-birthday">Birthday Party</span>
+                                        </td>
+                                        <td class="status">
+                                            <span class="status-badge status-pending">PENDING</span>
+                                        </td>
+                                        <td class="payment-status">
+                                            <span class="payment-badge payment-pending">PENDING</span>
+                                        </td>
+                                        <td class="actions">
+                                            <button class="btn btn-sm btn-outline-primary view-btn">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="booking-id">09</td>
+                                        <td class="event-desc">Tailored coverage to meet specific needs.</td>
+                                        <td class="category">
+                                            <span class="category-badge category-wedding">Wedding</span>
+                                        </td>
+                                        <td class="status">
+                                            <span class="status-badge status-pending">PENDING</span>
+                                        </td>
+                                        <td class="payment-status">
+                                            <span class="payment-badge payment-pending">PENDING</span>
+                                        </td>
+                                        <td class="actions">
+                                            <button class="btn btn-sm btn-outline-primary view-btn">View</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="booking-id">10</td>
+                                        <td class="event-desc">Comprehensive coverage for large events.</td>
+                                        <td class="category">
+                                            <span class="category-badge category-dancing">Dancing Party</span>
+                                        </td>
+                                        <td class="status">
+                                            <span class="status-badge status-complete">COMPLETE</span>
+                                        </td>
+                                        <td class="payment-status">
+                                            <span class="payment-badge payment-approved">APPROVED</span>
+                                        </td>
+                                        <td class="actions">
+                                            <button class="btn btn-sm btn-outline-primary view-btn">View</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
