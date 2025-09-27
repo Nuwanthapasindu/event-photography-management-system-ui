@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - Capturely</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reviews.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-camera"></i>
+                Capturely
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="my-bookings.html">My Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">My Albums</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="reviews.html">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-dark ms-2" href="book-event.html">Book Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-secondary ms-2" href="login.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="reviews-main">
+        <div class="container">
+            <!-- Leave a Review Section -->
+            <section class="leave-review-section">
+                <div class="review-form-container">
+                    <h2 class="section-title">Leave a Review</h2>
+                    
+                    <form class="review-form">
+                        <div class="event-selection-section">
+                            <label class="form-label">Select Event to Review</label>
+                            <div class="event-input">
+                                <select class="form-select event-select" id="event-selection" required>
+                                    <option value="">Choose an event...</option>
+                                    <option value="wedding-2024-07-15">Wedding Photography - July 15, 2024</option>
+                                    <option value="birthday-2024-07-10">Birthday Party - July 10, 2024</option>
+                                    <option value="corporate-2024-06-28">Corporate Event - June 28, 2024</option>
+                                    <option value="wedding-2024-06-20">Wedding Photography - June 20, 2024</option>
+                                    <option value="graduation-2024-06-15">Graduation Ceremony - June 15, 2024</option>
+                                    <option value="anniversary-2024-05-30">Anniversary Celebration - May 30, 2024</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="rating-section">
+                            <label class="form-label">Rating</label>
+                            <div class="star-rating-input">
+                                <input type="radio" name="rating" id="star5" value="5" required>
+                                <label for="star5" class="star-label" data-rating="5">
+                                    <i class="fas fa-star"></i>
+                                </label>
+                                
+                                <input type="radio" name="rating" id="star4" value="4">
+                                <label for="star4" class="star-label" data-rating="4">
+                                    <i class="fas fa-star"></i>
+                                </label>
+                                
+                                <input type="radio" name="rating" id="star3" value="3">
+                                <label for="star3" class="star-label" data-rating="3">
+                                    <i class="fas fa-star"></i>
+                                </label>
+                                
+                                <input type="radio" name="rating" id="star2" value="2">
+                                <label for="star2" class="star-label" data-rating="2">
+                                    <i class="fas fa-star"></i>
+                                </label>
+                                
+                                <input type="radio" name="rating" id="star1" value="1">
+                                <label for="star1" class="star-label" data-rating="1">
+                                    <i class="fas fa-star"></i>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="review-text-section">
+                            <label class="form-label">Review</label>
+                            <textarea class="form-control review-textarea" rows="6" placeholder="Share your experience with our photography services..." required minlength="10"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit-btn">Submit Review</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- All Reviews Section -->
+            <section class="all-reviews-section">
+                <h2 class="section-title">All Reviews</h2>
+                
+                <div class="reviews-container">
+                    <!-- Review Item 1 -->
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="https://via.placeholder.com/50x50/0A2540/FFFFFF?text=SC" alt="Sophia Carter" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4 class="reviewer-name">Sophia Carter</h4>
+                                    <span class="review-date">2024-07-20</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        
+                        <p class="review-text" data-review-id="1">
+                            Absolutely stunning photography! Sophia captured every moment perfectly, and the photos are of the highest quality. Highly recommend!
+                        </p>
+                        
+                        <!-- Edit Form (Hidden by default) -->
+                        <div class="edit-form" data-review-id="1" style="display: none;">
+                            <form action="/reviews/update" method="post">
+                                <input type="hidden" name="review_id" value="1">
+                                
+                                <div class="edit-rating-section">
+                                    <label class="form-label">Rating</label>
+                                    <div class="star-rating-input edit-stars" data-review-id="1">
+                                        <input type="radio" name="rating" id="edit-star5-1" value="5" checked required>
+                                        <label for="edit-star5-1" class="star-label" data-rating="5">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" name="rating" id="edit-star4-1" value="4">
+                                        <label for="edit-star4-1" class="star-label" data-rating="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" name="rating" id="edit-star3-1" value="3">
+                                        <label for="edit-star3-1" class="star-label" data-rating="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" name="rating" id="edit-star2-1" value="2">
+                                        <label for="edit-star2-1" class="star-label" data-rating="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" name="rating" id="edit-star1-1" value="1">
+                                        <label for="edit-star1-1" class="star-label" data-rating="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <textarea class="form-control edit-review-textarea" name="review_text" rows="4" required minlength="10">Absolutely stunning photography! Sophia captured every moment perfectly, and the photos are of the highest quality. Highly recommend!</textarea>
+                                
+                                <div class="edit-actions">
+                                    <button type="submit" class="btn btn-primary save-btn">Save</button>
+                                    <button type="button" class="btn btn-secondary cancel-btn" onclick="this.closest('.edit-form').style.display='none'; this.closest('.review-item').querySelector('.review-text').style.display='block'; this.closest('.review-item').querySelector('.rating-stars').style.display='flex'; this.closest('.review-item').querySelector('.review-actions').style.display='flex';">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="review-actions">
+                            <form action="/reviews/edit" method="get" style="display: inline;">
+                                <input type="hidden" name="review_id" value="1">
+                                <button type="submit" class="action-btn edit-btn">
+                                    <i class="fas fa-edit"></i>
+                                    <span>Edit</span>
+                                </button>
+                            </form>
+                            <form action="/reviews/delete" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this review?');">
+                                <input type="hidden" name="review_id" value="1">
+                                <button type="submit" class="action-btn delete-btn">
+                                    <i class="fas fa-trash"></i>
+                                    <span>Delete</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Review Item 2 -->
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="https://via.placeholder.com/50x50/0A2540/FFFFFF?text=LB" alt="Liam Bennett" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4 class="reviewer-name">Liam Bennett</h4>
+                                    <span class="review-date">2024-07-18</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        
+                        <p class="review-text" data-review-id="2">
+                            Liam did a great job, but there were a few shots that were slightly out of focus. Overall, a good experience.
+                        </p>
+                        
+                        <!-- Edit Form (Hidden by default) -->
+                        <div class="edit-form" data-review-id="2" style="display: none;">
+                            <form action="/reviews/update" method="post">
+                                <input type="hidden" name="review_id" value="2">
+                                
+                                <div class="edit-rating-section">
+                                    <label class="form-label">Rating</label>
+                                    <div class="star-rating-input edit-stars" data-review-id="2">
+                                        <input type="radio" name="rating" id="edit-star5-2" value="5">
+                                        <label for="edit-star5-2" class="star-label" data-rating="5">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" name="rating" id="edit-star4-2" value="4" checked required>
+                                        <label for="edit-star4-2" class="star-label" data-rating="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" name="rating" id="edit-star3-2" value="3">
+                                        <label for="edit-star3-2" class="star-label" data-rating="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" name="rating" id="edit-star2-2" value="2">
+                                        <label for="edit-star2-2" class="star-label" data-rating="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" name="rating" id="edit-star1-2" value="1">
+                                        <label for="edit-star1-2" class="star-label" data-rating="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <textarea class="form-control edit-review-textarea" name="review_text" rows="4" required minlength="10">Liam did a great job, but there were a few shots that were slightly out of focus. Overall, a good experience.</textarea>
+                                
+                                <div class="edit-actions">
+                                    <button type="submit" class="btn btn-primary save-btn">Save</button>
+                                    <button type="button" class="btn btn-secondary cancel-btn" onclick="this.closest('.edit-form').style.display='none'; this.closest('.review-item').querySelector('.review-text').style.display='block'; this.closest('.review-item').querySelector('.rating-stars').style.display='flex'; this.closest('.review-item').querySelector('.review-actions').style.display='flex';">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="review-actions">
+                            <form action="/reviews/edit" method="get" style="display: inline;">
+                                <input type="hidden" name="review_id" value="2">
+                                <button type="submit" class="action-btn edit-btn">
+                                    <i class="fas fa-edit"></i>
+                                    <span>Edit</span>
+                                </button>
+                            </form>
+                            <form action="/reviews/delete" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this review?');">
+                                <input type="hidden" name="review_id" value="2">
+                                <button type="submit" class="action-btn delete-btn">
+                                    <i class="fas fa-trash"></i>
+                                    <span>Delete</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Review Item 3 -->
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <img src="https://via.placeholder.com/50x50/0A2540/FFFFFF?text=OH" alt="Olivia Harper" class="reviewer-avatar">
+                                <div class="reviewer-details">
+                                    <h4 class="reviewer-name">Olivia Harper</h4>
+                                    <span class="review-date">2024-07-15</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        
+                        <p class="review-text" data-review-id="3">
+                            Olivia is a true professional. Her attention to detail and creative eye resulted in breathtaking photos that exceeded our expectations.
+                        </p>
+                        
+                        <!-- Edit Form (Hidden by default) -->
+                        <div class="edit-form" data-review-id="3" style="display: none;">
+                            <form action="/reviews/update" method="post">
+                                <input type="hidden" name="review_id" value="3">
+                                
+                                <div class="edit-rating-section">
+                                    <label class="form-label">Rating</label>
+                                    <div class="star-rating-input edit-stars" data-review-id="3">
+                                        <input type="radio" name="rating" id="edit-star5-3" value="5" checked required>
+                                        <label for="edit-star5-3" class="star-label" data-rating="5">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" name="rating" id="edit-star4-3" value="4">
+                                        <label for="edit-star4-3" class="star-label" data-rating="4">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" name="rating" id="edit-star3-3" value="3">
+                                        <label for="edit-star3-3" class="star-label" data-rating="3">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" name="rating" id="edit-star2-3" value="2">
+                                        <label for="edit-star2-3" class="star-label" data-rating="2">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                        
+                                        <input type="radio" name="rating" id="edit-star1-3" value="1">
+                                        <label for="edit-star1-3" class="star-label" data-rating="1">
+                                            <i class="fas fa-star"></i>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <textarea class="form-control edit-review-textarea" name="review_text" rows="4" required minlength="10">Olivia is a true professional. Her attention to detail and creative eye resulted in breathtaking photos that exceeded our expectations.</textarea>
+                                
+                                <div class="edit-actions">
+                                    <button type="submit" class="btn btn-primary save-btn">Save</button>
+                                    <button type="button" class="btn btn-secondary cancel-btn" onclick="this.closest('.edit-form').style.display='none'; this.closest('.review-item').querySelector('.review-text').style.display='block'; this.closest('.review-item').querySelector('.rating-stars').style.display='flex'; this.closest('.review-item').querySelector('.review-actions').style.display='flex';">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <div class="review-actions">
+                            <form action="/reviews/edit" method="get" style="display: inline;">
+                                <input type="hidden" name="review_id" value="3">
+                                <button type="submit" class="action-btn edit-btn">
+                                    <i class="fas fa-edit"></i>
+                                    <span>Edit</span>
+                                </button>
+                            </form>
+                            <form action="/reviews/delete" method="post" style="display: inline;" onsubmit="return confirm('Are you sure you want to delete this review?');">
+                                <input type="hidden" name="review_id" value="3">
+                                <button type="submit" class="action-btn delete-btn">
+                                    <i class="fas fa-trash"></i>
+                                    <span>Delete</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/reviews.js"></script>
+</body>
+</html>

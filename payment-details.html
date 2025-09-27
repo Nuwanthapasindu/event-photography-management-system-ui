@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details - Capturely</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/payment-details.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-camera logo-icon"></i>
+                    <span class="logo-text">Capturely</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">
+                            <i class="fas fa-tachometer-alt nav-icon"></i>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-calendar-check nav-icon"></i>
+                            <span class="nav-text">Bookings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-user-cog nav-icon"></i>
+                            <span class="nav-text">Admin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-camera nav-icon"></i>
+                            <span class="nav-text">Photographers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-box nav-icon"></i>
+                            <span class="nav-text">Packages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="payments.html" class="nav-link active">
+                            <i class="fas fa-credit-card nav-icon"></i>
+                            <span class="nav-text">Payments</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="reviews.html" class="nav-link">
+                            <i class="fas fa-star nav-icon"></i>
+                            <span class="nav-text">Reviews</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-images nav-icon"></i>
+                            <span class="nav-text">Albums</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-tools nav-icon"></i>
+                            <span class="nav-text">Equipment</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="sidebar-footer">
+                    <a href="#" class="nav-link logout-link">
+                        <i class="fas fa-sign-out-alt nav-icon"></i>
+                        <span class="nav-text">Log Out</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-bar-content">
+                    <div class="welcome-section">
+                        <div class="breadcrumb-nav">
+                            <a href="payments.html" class="breadcrumb-link">
+                                <i class="fas fa-arrow-left"></i>
+                                <span>Back to Payments</span>
+                            </a>
+                            <h1 class="page-title">Payment Details</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="top-bar-actions">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="user-profile">
+                            <img src="https://via.placeholder.com/40x40/0A2540/FFFFFF?text=N" alt="User Profile" class="profile-image">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Payment Details Content -->
+            <div class="dashboard-content">
+                <div class="content-wrapper">
+                    <!-- Payment Overview Card -->
+                    <div class="payment-overview-card">
+                        <div class="card-header">
+                            <div class="payment-status-section">
+                                <h2 class="payment-id">Payment #PAY-2024-001</h2>
+                                <span class="status-badge status-completed">Completed</span>
+                            </div>
+                            <div class="payment-amount-section">
+                                <div class="amount-display">$2,500</div>
+                                <div class="payment-method">Credit Card</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Details Grid -->
+                    <div class="details-grid">
+                        <!-- Client Information -->
+                        <div class="details-card">
+                            <div class="card-title">
+                                <i class="fas fa-user card-icon"></i>
+                                <h3>Client Information</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="detail-row">
+                                    <label>Name</label>
+                                    <span>Sophia Carter</span>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Email</label>
+                                    <span>sophia.carter@email.com</span>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Phone</label>
+                                    <span>+1 (555) 123-4567</span>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Address</label>
+                                    <span>123 Wedding Street, City, State 12345</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Booking Information -->
+                        <div class="details-card">
+                            <div class="card-title">
+                                <i class="fas fa-calendar-alt card-icon"></i>
+                                <h3>Booking Information</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="detail-row">
+                                    <label>Event Type</label>
+                                    <span>Wedding Photography</span>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Event Date</label>
+                                    <span>August 15, 2024</span>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Venue</label>
+                                    <span>Grand Ballroom, Downtown Hotel</span>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Package</label>
+                                    <span>Premium Wedding Package</span>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Photographer</label>
+                                    <span>John Anderson</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Information -->
+                        <div class="details-card">
+                            <div class="card-title">
+                                <i class="fas fa-credit-card card-icon"></i>
+                                <h3>Payment Information</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="detail-row">
+                                    <label>Payment Date</label>
+                                    <span>July 15, 2024</span>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Payment Method</label>
+                                    <span>Credit Card (****-4567)</span>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Transaction ID</label>
+                                    <span>TXN-789456123</span>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Payment Type</label>
+                                    <span>Full Payment</span>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Status</label>
+                                    <div class="status-update-section">
+                                        <select class="form-select status-select" id="paymentStatusSelect" onchange="updatePaymentStatus()">
+                                            <option value="completed" selected>Completed</option>
+                                            <option value="pending">Pending</option>
+                                            <option value="failed">Failed</option>
+                                            <option value="refunded">Refunded</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Currency</label>
+                                    <span>USD</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Breakdown -->
+                        <div class="details-card">
+                            <div class="card-title">
+                                <i class="fas fa-receipt card-icon"></i>
+                                <h3>Payment Breakdown</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="detail-row">
+                                    <label>Package Price</label>
+                                    <span>$2,200</span>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Additional Services</label>
+                                    <span>$200</span>
+                                </div>
+                                <div class="detail-row">
+                                    <label>Tax (5%)</label>
+                                    <span>$100</span>
+                                </div>
+                                <div class="detail-row total-row">
+                                    <label>Total Amount</label>
+                                    <span>$2,500</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Slip -->
+                        <div class="details-card">
+                            <div class="card-title">
+                                <i class="fas fa-file-image card-icon"></i>
+                                <h3>Payment Slip</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="payment-slip-container">
+                                    <img src="https://via.placeholder.com/400x500/F5F6FA/0A2540?text=Payment+Slip+Image" alt="Payment Slip" class="payment-slip-image" onclick="openImageModal()">
+                                    <div class="slip-info">
+                                        <small class="text-muted">Click to view full size</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="action-buttons">
+                        <button class="btn btn-outline-secondary download-btn">
+                            <i class="fas fa-download"></i>
+                            Download Receipt
+                        </button>
+                        <button class="btn btn-outline-info send-email-btn">
+                            <i class="fas fa-envelope"></i>
+                            Send Email
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Payment Slip</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="https://via.placeholder.com/600x750/F5F6FA/0A2540?text=Payment+Slip+Full+Size" alt="Payment Slip Full Size" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/payment-details.js"></script>
+</body>
+</html>

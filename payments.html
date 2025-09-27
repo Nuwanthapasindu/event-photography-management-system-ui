@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments - Capturely</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link rel="stylesheet" href="/css/payments.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-camera logo-icon"></i>
+                    <span class="logo-text">Capturely</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="dashboard.html" class="nav-link">
+                            <i class="fas fa-tachometer-alt nav-icon"></i>
+                            <span class="nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-calendar-check nav-icon"></i>
+                            <span class="nav-text">Bookings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-user-cog nav-icon"></i>
+                            <span class="nav-text">Admin</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-camera nav-icon"></i>
+                            <span class="nav-text">Photographers</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-box nav-icon"></i>
+                            <span class="nav-text">Packages</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-credit-card nav-icon"></i>
+                            <span class="nav-text">Payments</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="reviews.html" class="nav-link">
+                            <i class="fas fa-star nav-icon"></i>
+                            <span class="nav-text">Reviews</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-images nav-icon"></i>
+                            <span class="nav-text">Albums</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-tools nav-icon"></i>
+                            <span class="nav-text">Equipment</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="sidebar-footer">
+                    <a href="#" class="nav-link logout-link">
+                        <i class="fas fa-sign-out-alt nav-icon"></i>
+                        <span class="nav-text">Log Out</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-bar-content">
+                    <div class="welcome-section">
+                        <h1 class="welcome-title">Welcome <span class="user-name">Nuwantha</span></h1>
+                    </div>
+                    
+                    <div class="top-bar-actions">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="user-profile">
+                            <img src="https://via.placeholder.com/40x40/0A2540/FFFFFF?text=N" alt="User Profile" class="profile-image">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Payments Content -->
+            <div class="dashboard-content">
+                <div class="content-wrapper">
+                    <!-- Payments Table -->
+                    <div class="payments-table-container">
+                        <div class="table-responsive">
+                            <table class="table payments-table">
+                                <thead>
+                                    <tr>
+                                        <th>Client</th>
+                                        <th>Booking</th>
+                                        <th>Amount</th>
+                                        <th>Payment Date</th>
+                                        <th>Payment Type</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="client-name">
+                                            <a href="payment-details.html" class="client-link">Sophia Carter</a>
+                                        </td>
+                                        <td class="booking-type">
+                                            <div class="booking-main">Wedding</div>
+                                            <div class="booking-sub">Photography</div>
+                                        </td>
+                                        <td class="amount">$2,500</td>
+                                        <td class="payment-date">2024-07-15</td>
+                                        <td class="payment-type">FULL</td>
+                                        <td class="payment-status">
+                                            <span class="status-badge status-completed">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="client-name">Ethan Bennett</td>
+                                        <td class="booking-type">
+                                            <div class="booking-main">Corporate Event</div>
+                                            <div class="booking-sub"></div>
+                                        </td>
+                                        <td class="amount">$1,800</td>
+                                        <td class="payment-date">2024-07-10</td>
+                                        <td class="payment-type">ADVANCE</td>
+                                        <td class="payment-status">
+                                            <span class="status-badge status-pending">Pending</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="client-name">Olivia Hayes</td>
+                                        <td class="booking-type">
+                                            <div class="booking-main">Family Portrait</div>
+                                            <div class="booking-sub"></div>
+                                        </td>
+                                        <td class="amount">$500</td>
+                                        <td class="payment-date">2024-07-05</td>
+                                        <td class="payment-type">FULL</td>
+                                        <td class="payment-status">
+                                            <span class="status-badge status-completed">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="client-name">Liam Foster</td>
+                                        <td class="booking-type">
+                                            <div class="booking-main">Engagement Shoot</div>
+                                            <div class="booking-sub"></div>
+                                        </td>
+                                        <td class="amount">$750</td>
+                                        <td class="payment-date">2024-06-30</td>
+                                        <td class="payment-type">FULL</td>
+                                        <td class="payment-status">
+                                            <span class="status-badge status-completed">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="client-name">Ava Morgan</td>
+                                        <td class="booking-type">
+                                            <div class="booking-main">Birthday Party</div>
+                                            <div class="booking-sub"></div>
+                                        </td>
+                                        <td class="amount">$1,200</td>
+                                        <td class="payment-date">2024-06-25</td>
+                                        <td class="payment-type">FULL</td>
+                                        <td class="payment-status">
+                                            <span class="status-badge status-completed">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="client-name">Noah Parker</td>
+                                        <td class="booking-type">
+                                            <div class="booking-main">Graduation</div>
+                                            <div class="booking-sub">Ceremony</div>
+                                        </td>
+                                        <td class="amount">$900</td>
+                                        <td class="payment-date">2024-06-20</td>
+                                        <td class="payment-type">FULL</td>
+                                        <td class="payment-status">
+                                            <span class="status-badge status-completed">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="client-name">Isabella Reed</td>
+                                        <td class="booking-type">
+                                            <div class="booking-main">Fashion Show</div>
+                                            <div class="booking-sub"></div>
+                                        </td>
+                                        <td class="amount">$3,000</td>
+                                        <td class="payment-date">2024-06-15</td>
+                                        <td class="payment-type">FULL</td>
+                                        <td class="payment-status">
+                                            <span class="status-badge status-completed">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="client-name">Jackson Cole</td>
+                                        <td class="booking-type">
+                                            <div class="booking-main">Product</div>
+                                            <div class="booking-sub">Photography</div>
+                                        </td>
+                                        <td class="amount">$1,500</td>
+                                        <td class="payment-date">2024-06-10</td>
+                                        <td class="payment-type">FULL</td>
+                                        <td class="payment-status">
+                                            <span class="status-badge status-pending">Pending</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="client-name">Mia Hughes</td>
+                                        <td class="booking-type">
+                                            <div class="booking-main">Real Estate Shoot</div>
+                                            <div class="booking-sub"></div>
+                                        </td>
+                                        <td class="amount">$600</td>
+                                        <td class="payment-date">2024-06-05</td>
+                                        <td class="payment-type">FULL</td>
+                                        <td class="payment-status">
+                                            <span class="status-badge status-completed">Completed</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="client-name">Aiden Brooks</td>
+                                        <td class="booking-type">
+                                            <div class="booking-main">Music Festival</div>
+                                            <div class="booking-sub"></div>
+                                        </td>
+                                        <td class="amount">$2,200</td>
+                                        <td class="payment-date">2024-05-30</td>
+                                        <td class="payment-type">FULL</td>
+                                        <td class="payment-status">
+                                            <span class="status-badge status-completed">Completed</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/payments.js"></script>
+</body>
+</html>

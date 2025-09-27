@@ -1,0 +1,211 @@
+/* Payments Page Styles */
+
+/* Payments Table Container */
+.payments-table-container {
+    background-color: var(--secondary-white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E5E7EB;
+}
+
+/* Payments Table */
+.payments-table {
+    margin: 0;
+    width: 100%;
+}
+
+.payments-table th {
+    background-color: var(--secondary-light-gray);
+    border-bottom: 2px solid #E5E7EB;
+    font-weight: 600;
+    color: var(--text-primary);
+    padding: 1rem 0.75rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-top: none;
+}
+
+.payments-table td {
+    padding: 1.25rem 0.75rem;
+    border-bottom: 1px solid #F3F4F6;
+    vertical-align: middle;
+    border-top: none;
+}
+
+.payments-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.payments-table tbody tr:hover {
+    background-color: #F9FAFB;
+}
+
+/* Client Name */
+.client-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.client-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.client-link:hover {
+    color: var(--primary-deep-blue);
+    text-decoration: underline;
+}
+
+/* Booking Type */
+.booking-type {
+    line-height: 1.4;
+}
+
+.booking-main {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.booking-sub {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 0.15rem;
+}
+
+/* Amount */
+.amount {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+/* Payment Date */
+.payment-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Payment Type */
+.payment-type {
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.025em;
+    min-width: 90px;
+    text-align: center;
+}
+
+.status-completed {
+    background-color: var(--interactive-success-green);
+    color: white;
+}
+
+.status-pending {
+    background-color: var(--interactive-warning-orange);
+    color: white;
+}
+
+/* Table Responsive Adjustments */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .payments-table-container {
+        padding: 1rem;
+        overflow-x: auto;
+    }
+    
+    .payments-table {
+        min-width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+    .payments-table-container {
+        padding: 0.75rem;
+    }
+    
+    .payments-table th,
+    .payments-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .client-name {
+        font-size: 0.85rem;
+    }
+    
+    .booking-main {
+        font-size: 0.8rem;
+    }
+    
+    .booking-sub {
+        font-size: 0.75rem;
+    }
+    
+    .amount {
+        font-size: 0.85rem;
+    }
+    
+    .status-badge {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.7rem;
+        min-width: 80px;
+    }
+}
+
+/* Custom scrollbar for payments table */
+.payments-table-container .table-responsive::-webkit-scrollbar {
+    height: 6px;
+}
+
+.payments-table-container .table-responsive::-webkit-scrollbar-track {
+    background: #F3F4F6;
+}
+
+.payments-table-container .table-responsive::-webkit-scrollbar-thumb {
+    background: #D1D5DB;
+    border-radius: 3px;
+}
+
+.payments-table-container .table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #9CA3AF;
+}
+
+/* Additional table styling for better visual hierarchy */
+.payments-table thead th:first-child {
+    border-top-left-radius: 8px;
+}
+
+.payments-table thead th:last-child {
+    border-top-right-radius: 8px;
+}
+
+/* Hover effects */
+.payments-table tbody tr:hover .client-name {
+    color: var(--primary-deep-blue);
+}
+
+.payments-table tbody tr:hover .amount {
+    color: var(--primary-deep-blue);
+}

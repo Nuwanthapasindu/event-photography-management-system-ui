@@ -1,0 +1,425 @@
+/* Payment Details Page Styles */
+
+/* Breadcrumb Navigation */
+.breadcrumb-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.breadcrumb-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+    color: var(--primary-deep-blue);
+}
+
+.page-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* Payment Overview Card */
+.payment-overview-card {
+    background-color: var(--secondary-white);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E5E7EB;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment-status-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.payment-id {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.payment-amount-section {
+    text-align: right;
+}
+
+.amount-display {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-deep-blue);
+    line-height: 1;
+}
+
+.payment-method {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}
+
+/* Status Update Section */
+.status-update-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-select {
+    border: 2px solid #E5E7EB;
+    border-radius: 6px;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background-color: var(--secondary-white);
+    color: var(--text-primary);
+    transition: border-color 0.2s ease;
+    min-width: 140px;
+}
+
+.status-select:focus {
+    border-color: var(--primary-deep-blue);
+    box-shadow: 0 0 0 0.2rem rgba(10, 37, 64, 0.15);
+    outline: none;
+}
+
+/* Payment Slip Styles */
+.payment-slip-container {
+    text-align: center;
+}
+
+.payment-slip-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #E5E7EB;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.payment-slip-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.slip-info {
+    margin-top: 0.5rem;
+}
+.status-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.025em;
+}
+
+.status-completed {
+    background-color: var(--interactive-success-green);
+    color: white;
+}
+
+.status-pending {
+    background-color: var(--interactive-warning-orange);
+    color: white;
+}
+
+.status-failed {
+    background-color: var(--interactive-error-red);
+    color: white;
+}
+
+.status-refunded {
+    background-color: var(--interactive-info-blue);
+    color: white;
+}
+
+/* Details Grid */
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.details-card {
+    background-color: var(--secondary-white);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E5E7EB;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.details-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #F3F4F6;
+}
+
+.card-icon {
+    font-size: 1.25rem;
+    color: var(--primary-deep-blue);
+}
+
+.card-title h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #F9FAFB;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    min-width: 120px;
+    margin: 0;
+}
+
+.detail-row span {
+    color: var(--text-primary);
+    font-weight: 500;
+    text-align: right;
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.total-row {
+    border-top: 2px solid #E5E7EB;
+    border-bottom: none;
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+}
+
+.total-row label,
+.total-row span {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem 0;
+    border-top: 1px solid #E5E7EB;
+}
+
+.update-btn {
+    background-color: var(--primary-deep-blue);
+    border-color: var(--primary-deep-blue);
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.update-btn:hover {
+    background-color: #07305d;
+    border-color: #07305d;
+    transform: translateY(-1px);
+}
+
+.download-btn,
+.send-email-btn {
+    padding: 0.75rem 2rem;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.download-btn:hover,
+.send-email-btn:hover {
+    transform: translateY(-1px);
+}
+
+/* Modal Customizations */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.modal-header {
+    background-color: var(--secondary-light-gray);
+    border-bottom: 1px solid #E5E7EB;
+    border-radius: 12px 12px 0 0;
+    padding: 1.5rem;
+}
+
+.modal-title {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+.modal-footer {
+    border-top: 1px solid #E5E7EB;
+    padding: 1.5rem;
+}
+
+/* Form Styling */
+.form-label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+    border: 2px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 0.75rem;
+    transition: border-color 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-deep-blue);
+    box-shadow: 0 0 0 0.2rem rgba(10, 37, 64, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .payment-amount-section {
+        text-align: left;
+    }
+    
+    .amount-display {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-content {
+        padding: 1rem;
+    }
+    
+    .payment-overview-card,
+    .details-card {
+        padding: 1rem;
+    }
+    
+    .details-grid {
+        gap: 1rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .action-buttons .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .detail-row {
+        flex-direction: column;
+        gap: 0.25rem;
+        align-items: flex-start;
+    }
+    
+    .detail-row span {
+        text-align: left;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .amount-display {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-dialog {
+        margin: 1rem;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+}
+
+/* Animation for cards */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.details-card {
+    animation: slideInUp 0.3s ease-out;
+}
+
+.details-card:nth-child(1) { animation-delay: 0.1s; }
+.details-card:nth-child(2) { animation-delay: 0.2s; }
+.details-card:nth-child(3) { animation-delay: 0.3s; }
+.details-card:nth-child(4) { animation-delay: 0.4s; }
