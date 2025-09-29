@@ -1,0 +1,391 @@
+/* Photographer Dashboard Styles */
+
+/* Page Layout */
+body {
+    background-color: var(--secondary-light-gray);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Navigation Bar */
+.photographer-navbar {
+    background-color: var(--secondary-white) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.photographer-brand {
+    color: var(--text-primary) !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.photographer-brand:hover {
+    color: var(--primary-deep-blue) !important;
+}
+
+.photographer-brand i {
+    color: var(--primary-deep-blue);
+}
+
+.photographer-nav-link {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.photographer-nav-link:hover {
+    color: var(--primary-deep-blue) !important;
+}
+
+.photographer-nav-link.active {
+    color: var(--primary-deep-blue) !important;
+    font-weight: 600;
+}
+
+.photographer-nav-link i {
+    font-size: 0.9rem;
+}
+
+/* Profile Avatar */
+.photographer-avatar {
+    text-decoration: none;
+    display: block;
+}
+
+.photographer-avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-deep-blue);
+    transition: transform 0.3s ease;
+}
+
+.photographer-avatar-placeholder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-deep-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-white);
+    font-size: 1.2rem;
+    border: 2px solid var(--primary-deep-blue);
+    transition: transform 0.3s ease;
+}
+
+.photographer-avatar:hover .photographer-avatar-img,
+.photographer-avatar:hover .photographer-avatar-placeholder {
+    transform: scale(1.1);
+}
+
+.photographer-dropdown {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    background-color: var(--secondary-white);
+}
+
+.photographer-dropdown .dropdown-item {
+    color: var(--text-secondary);
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.photographer-dropdown .dropdown-item:hover {
+    background-color: var(--secondary-light-gray);
+    color: var(--primary-deep-blue);
+}
+
+.photographer-dropdown .dropdown-item i {
+    color: var(--text-muted);
+    width: 16px;
+}
+
+/* Main Content */
+.photographer-main {
+    min-height: calc(100vh - 80px);
+    padding-top: 2rem;
+}
+
+.photographer-page-title {
+    color: var(--text-primary);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.photographer-page-title i {
+    color: var(--primary-deep-blue);
+}
+
+/* Events Card */
+.photographer-events-card {
+    background-color: var(--secondary-white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.photographer-card-body {
+    padding: 0;
+}
+
+/* Events Table */
+.photographer-events-table {
+    margin-bottom: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.photographer-table-header {
+    background-color: #fafbfc;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1.25rem 1.5rem;
+    border: none;
+    position: sticky;
+    top: 0;
+}
+
+.photographer-table-row {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    transition: background-color 0.2s ease;
+}
+
+.photographer-table-row:hover {
+    background-color: rgba(10, 37, 64, 0.02);
+}
+
+.photographer-table-row:last-child {
+    border-bottom: none;
+}
+
+.photographer-table-cell {
+    padding: 1.5rem 1.5rem;
+    border: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.photographer-venue {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.photographer-client {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* View Button */
+.photographer-view-btn {
+    background-color: var(--interactive-success-green);
+    border: none;
+    color: var(--secondary-white);
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-transform: none;
+}
+
+.photographer-view-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+    color: var(--secondary-white);
+}
+
+.photographer-view-btn:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.photographer-view-btn i {
+    font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 991.98px) {
+    .photographer-navbar .navbar-nav {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        margin-top: 1rem;
+    }
+    
+    .photographer-nav-link {
+        margin-bottom: 0.5rem;
+        margin-right: 0 !important;
+    }
+    
+    .photographer-main {
+        padding-top: 1rem;
+    }
+    
+    .photographer-page-title {
+        font-size: 1.75rem;
+    }
+    
+    .photographer-table-header,
+    .photographer-table-cell {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .photographer-page-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .photographer-events-card {
+        border-radius: 8px;
+        margin: 0 0.5rem;
+    }
+    
+    .photographer-table-header,
+    .photographer-table-cell {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.875rem;
+    }
+    
+    .photographer-table-header {
+        font-size: 0.75rem;
+    }
+    
+    .photographer-view-btn {
+        padding: 0.375rem 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .photographer-venue,
+    .photographer-client {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container-fluid {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .photographer-events-card {
+        margin: 0;
+        border-radius: 6px;
+    }
+    
+    /* Stack table for mobile */
+    .photographer-events-table,
+    .photographer-events-table thead,
+    .photographer-events-table tbody,
+    .photographer-events-table th,
+    .photographer-events-table td,
+    .photographer-events-table tr {
+        display: block;
+    }
+    
+    .photographer-events-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .photographer-table-row {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background-color: var(--secondary-white);
+    }
+    
+    .photographer-table-cell {
+        border: none !important;
+        padding: 0.5rem 0;
+        position: relative;
+        padding-left: 30% !important;
+        white-space: normal;
+        text-align: left !important;
+    }
+    
+    .photographer-table-cell:before {
+        content: attr(data-label) ": ";
+        position: absolute;
+        left: 0;
+        width: 25%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: 600;
+        color: var(--text-primary);
+    }
+}
+
+/* Loading States */
+.photographer-table-row.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.photographer-view-btn.loading {
+    position: relative;
+}
+
+.photographer-view-btn.loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    border: 2px solid transparent;
+    border-top-color: var(--secondary-white);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Focus States for Accessibility */
+.photographer-nav-link:focus,
+.photographer-view-btn:focus,
+.photographer-avatar:focus {
+    outline: 2px solid var(--primary-deep-blue);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .photographer-navbar,
+    .photographer-view-btn {
+        display: none !important;
+    }
+    
+    .photographer-main {
+        padding-top: 0;
+    }
+    
+    .photographer-events-card {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+}
