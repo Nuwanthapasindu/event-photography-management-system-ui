@@ -1,0 +1,553 @@
+/* Client Albums Page Styles */
+
+/* Global Styles */
+body {
+    background-color: var(--secondary-light-gray);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Navigation Bar */
+.client-navbar {
+    background-color: var(--secondary-white) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+.client-brand {
+    color: var(--text-primary) !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.client-brand:hover {
+    color: var(--primary-deep-blue) !important;
+}
+
+.client-brand i {
+    color: var(--primary-deep-blue);
+}
+
+.client-nav-link {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+}
+
+.client-nav-link:hover {
+    color: var(--primary-deep-blue) !important;
+}
+
+.client-nav-link.active {
+    color: var(--primary-deep-blue) !important;
+    font-weight: 600;
+}
+
+.client-book-btn {
+    background-color: var(--primary-deep-blue) !important;
+    border-color: var(--primary-deep-blue) !important;
+    color: var(--secondary-white) !important;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.client-book-btn:hover {
+    background-color: #07305d !important;
+    border-color: #07305d !important;
+    color: var(--secondary-white) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(10, 37, 64, 0.3);
+}
+
+.client-logout-btn {
+    background-color: var(--text-muted) !important;
+    border-color: var(--text-muted) !important;
+    color: var(--secondary-white) !important;
+    font-weight: 500;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.client-logout-btn:hover {
+    background-color: var(--interactive-error-red) !important;
+    border-color: var(--interactive-error-red) !important;
+    color: var(--secondary-white) !important;
+}
+
+/* Main Content */
+.client-main {
+    min-height: calc(100vh - 200px);
+    padding-top: 2rem;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.page-title i {
+    color: var(--primary-deep-blue);
+}
+
+.page-subtitle {
+    color: var(--text-muted);
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+/* Album Cards */
+.album-card {
+    background-color: var(--secondary-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    cursor: pointer;
+}
+
+.album-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.album-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.album-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.album-card:hover .album-overlay {
+    opacity: 1;
+}
+
+.album-view-btn {
+    background-color: var(--secondary-white);
+    color: var(--text-primary);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    text-transform: none;
+}
+
+.album-view-btn[data-status="locked"] {
+    background-color: var(--interactive-error-red);
+    color: var(--secondary-white);
+}
+
+.album-view-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.album-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+}
+
+/* Album Theme Backgrounds */
+.wedding-bg {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+}
+
+.graduation-bg {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.family-bg {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.corporate-bg {
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+}
+
+.gala-bg {
+    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+}
+
+.festival-bg {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.picnic-bg {
+    background: linear-gradient(135deg, #16a085, #1abc9c);
+}
+
+.exhibition-bg {
+    background: linear-gradient(135deg, #d35400, #e67e22);
+}
+
+/* Album Content */
+.album-content {
+    padding: 1.5rem;
+}
+
+.album-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.album-date {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.album-status {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.status-badge {
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.status-badge.unlocked {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--interactive-success-green);
+    border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.status-badge.locked {
+    background-color: rgba(230, 57, 70, 0.1);
+    color: var(--interactive-error-red);
+    border: 1px solid rgba(230, 57, 70, 0.3);
+}
+
+.status-badge i {
+    font-size: 0.8rem;
+}
+
+/* Footer */
+.client-footer {
+    background-color: var(--secondary-charcoal-gray);
+    color: var(--secondary-white);
+    margin-top: 4rem;
+}
+
+.client-footer a {
+    color: var(--secondary-white) !important;
+    transition: color 0.3s ease;
+}
+
+.client-footer a:hover {
+    color: var(--interactive-info-blue) !important;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1199.98px) {
+    .album-image {
+        height: 220px;
+    }
+    
+    .page-title {
+        font-size: 2.25rem;
+    }
+    
+    .album-placeholder {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .client-navbar .navbar-collapse {
+        margin-top: 1rem;
+    }
+    
+    .client-nav-link {
+        padding: 0.75rem 0;
+        margin: 0.25rem 0;
+        text-align: center;
+    }
+    
+    .client-book-btn,
+    .client-logout-btn {
+        margin: 0.5rem auto;
+        display: block;
+        text-align: center;
+        width: fit-content;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    
+    .album-image {
+        height: 200px;
+    }
+    
+    .album-placeholder {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .client-main {
+        padding-top: 1rem;
+    }
+    
+    .page-header {
+        margin-bottom: 2rem;
+    }
+    
+    .page-title {
+        font-size: 1.75rem;
+    }
+    
+    .page-subtitle {
+        font-size: 0.95rem;
+    }
+    
+    .album-image {
+        height: 180px;
+    }
+    
+    .album-content {
+        padding: 1.25rem;
+    }
+    
+    .album-title {
+        font-size: 1.125rem;
+    }
+    
+    .album-date {
+        font-size: 0.875rem;
+    }
+    
+    .album-placeholder {
+        font-size: 2.5rem;
+    }
+    
+    .album-view-btn {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+    
+    .page-title i {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    
+    .album-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .album-image {
+        height: 160px;
+    }
+    
+    .album-content {
+        padding: 1rem;
+    }
+    
+    .album-title {
+        font-size: 1rem;
+    }
+    
+    .album-date {
+        font-size: 0.8rem;
+    }
+    
+    .album-placeholder {
+        font-size: 2rem;
+    }
+    
+    .status-badge {
+        font-size: 0.8rem;
+        padding: 0.25rem 0.625rem;
+    }
+    
+    .album-view-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-up {
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading .album-view-btn {
+    position: relative;
+}
+
+.loading .album-view-btn::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Focus States for Accessibility */
+.client-nav-link:focus,
+.client-book-btn:focus,
+.client-logout-btn:focus,
+.album-view-btn:focus,
+.album-card:focus {
+    outline: 2px solid var(--primary-deep-blue);
+    outline-offset: 2px;
+}
+
+/* Hover Effects for Touch Devices */
+@media (hover: none) {
+    .album-card:hover {
+        transform: none;
+    }
+    
+    .album-overlay {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .client-navbar,
+    .client-footer,
+    .album-overlay,
+    .album-view-btn {
+        display: none !important;
+    }
+    
+    .album-card {
+        box-shadow: none;
+        border: 1px solid #000;
+        break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+    
+    .page-title {
+        color: #000;
+    }
+    
+    .status-badge {
+        border: 1px solid #000;
+        color: #000 !important;
+    }
+}
